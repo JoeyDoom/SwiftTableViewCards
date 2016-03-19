@@ -24,8 +24,8 @@ class CardCell: UITableViewCell {
         self.cardView.layer.masksToBounds = false
         self.cardView.layer.cornerRadius = 1
         // if you like rounded corners
-        self.cardView.layer.shadowOffset = CGSizeMake(-0.2, 0.2)
-        //%%% this shadow will hang slightly down and to the right
+        self.cardView.layer.shadowOffset = CGSizeMake(0, 0.7)
+        //%%% this shadow will hang slightly down and in the center
         self.cardView.layer.shadowRadius = 1
         //%%% I prefer thinner, subtler shadows, but you can play with this
         self.cardView.layer.shadowOpacity = 0.2

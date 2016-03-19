@@ -8,10 +8,11 @@
 
 import UIKit
 
-let titles = ["Important Stuff", "Joey is the best", "Third One"]
+let titles = ["Important Stuff", "Joey is the best", "Third One", "Booger Farm"]
 let bodies = ["Vivamus in varius felis, eu consectetur mi. Sed elit ipsum, feugiat et lacinia sit amet, vehicula vitae mi. Morbi sit amet tellus luctus, blandit lacus quis, tincidunt justo. Quisque odio dolor, condimentum sit amet suscipit nec, rhoncus sed est. Morbi vel sapien vitae ex egestas pretium et id tellus. Sed viverra leo ut justo bibendum ultricies. Nulla ultricies porttitor est, nec fermentum orci consectetur et. Sed ac turpis at lacus aliquet congue. Nulla quis venenatis ante.",
     "butt dong",
-    "I wanna know what love is. I want you to show me."]
+    "I wanna know what love is. I want you to show me.",
+    "This one is useless. I just wanted to do something. The twilight zone is very cool though."]
 
 class TableController: UITableViewController {
 
@@ -54,21 +55,29 @@ class TableController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return titles.count
+        return titles.count + 1
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        // choose which prototype to use
-        let cell = tableView.dequeueReusableCellWithIdentifier("cellblock", forIndexPath: indexPath)  as! CardCell
         
-        //make the labels say something
-        cell.titleLabel.text = titles[indexPath.row]
-        cell.bodyLabel.text = bodies[indexPath.row]
-        cell.bodyLabel.sizeToFit()
+        if(indexPath.row != 0 ) {
+            // choose which prototype to use
+            let cell = tableView.dequeueReusableCellWithIdentifier("cellblock", forIndexPath: indexPath)  as! CardCell
+            
+            //make the labels say something
+            cell.titleLabel.text = titles[indexPath.row - 1]
+            cell.bodyLabel.text = bodies[indexPath.row - 1]
+            cell.bodyLabel.sizeToFit()
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCellWithIdentifier("headercell", forIndexPath: indexPath)
+            return cell
+        }
+        
+        
 
-        return cell
     }
     
 

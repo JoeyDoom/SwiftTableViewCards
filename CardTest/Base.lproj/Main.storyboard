@@ -68,6 +68,29 @@
                                     <outlet property="titleLabel" destination="lVK-dY-EPK" id="PH5-x7-G7S"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="headercell" id="pWj-2t-hOq">
+                                <rect key="frame" x="0.0" y="197" width="375" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pWj-2t-hOq" id="IzP-ct-c0m">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THIS IS THE TOP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sf2-Np-mXn">
+                                            <rect key="frame" x="8" y="30" width="359" height="39"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Sf2-Np-mXn" firstAttribute="top" secondItem="IzP-ct-c0m" secondAttribute="topMargin" constant="22" id="36v-1X-9zU"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Sf2-Np-mXn" secondAttribute="bottom" constant="123" id="MWU-bv-EIb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Sf2-Np-mXn" secondAttribute="trailing" id="YiV-yd-fXn"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="Sf2-Np-mXn" secondAttribute="leading" id="Zq5-7f-gbL"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="8VC-eu-CP3" id="LlL-Nb-liL"/>
