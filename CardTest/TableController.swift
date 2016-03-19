@@ -76,7 +76,7 @@ class TableController: UITableViewController {
             cell.bodyLabel.sizeToFit()
             return cell
             
-        
+        // if it's the last one, use the footer
         }else if(indexPath.row == titles.count - 1){
             let cell = tableView.dequeueReusableCellWithIdentifier("cellfoot", forIndexPath: indexPath)  as! CardCell
             //make the labels say something

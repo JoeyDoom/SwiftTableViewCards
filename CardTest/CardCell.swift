@@ -13,6 +13,7 @@ class CardCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var cardButton: UIButton!
     
     override func layoutSubviews() {
         self.cardSetup()

@@ -68,38 +68,54 @@
                                     <outlet property="titleLabel" destination="L7u-9q-TP3" id="gm4-WH-JYk"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellhead" rowHeight="105" id="89N-Ud-8LF" customClass="CardCell" customModule="CardTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="197" width="375" height="105"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellhead" rowHeight="36" id="89N-Ud-8LF" customClass="CardCell" customModule="CardTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="197" width="375" height="36"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="89N-Ud-8LF" id="zvH-Tq-llF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvb-xB-IUs">
-                                            <rect key="frame" x="9" y="0.0" width="357" height="105"/>
+                                            <rect key="frame" x="9" y="-12" width="357" height="56"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQX-39-HKo">
-                                                    <rect key="frame" x="15" y="59" width="326" height="26"/>
+                                                    <rect key="frame" x="15" y="20" width="326" height="26"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="26" id="Tis-Xm-OTh"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="Tis-Xm-OTh"/>
+                                                        </mask>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="lQX-39-HKo" secondAttribute="trailing" constant="16" id="3kQ-7I-y98"/>
-                                                <constraint firstAttribute="bottom" secondItem="lQX-39-HKo" secondAttribute="bottom" constant="20" id="Ebf-MT-awK"/>
+                                                <constraint firstAttribute="bottom" secondItem="lQX-39-HKo" secondAttribute="bottom" constant="10" id="Ebf-MT-awK"/>
+                                                <constraint firstItem="lQX-39-HKo" firstAttribute="top" secondItem="fvb-xB-IUs" secondAttribute="top" constant="20" id="J2n-Zj-4Qf"/>
+                                                <constraint firstAttribute="bottom" secondItem="lQX-39-HKo" secondAttribute="bottom" constant="10" id="WdY-t0-H3J"/>
                                                 <constraint firstItem="lQX-39-HKo" firstAttribute="leading" secondItem="fvb-xB-IUs" secondAttribute="leading" constant="15" id="rGg-u3-sfm"/>
+                                                <constraint firstItem="lQX-39-HKo" firstAttribute="leading" secondItem="fvb-xB-IUs" secondAttribute="leading" constant="15" id="u2O-3Z-Iso"/>
+                                                <constraint firstAttribute="trailing" secondItem="lQX-39-HKo" secondAttribute="trailing" constant="16" id="xX9-Ye-9wV"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="3kQ-7I-y98"/>
+                                                    <exclude reference="Ebf-MT-awK"/>
+                                                    <exclude reference="rGg-u3-sfm"/>
+                                                </mask>
+                                            </variation>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstItem="fvb-xB-IUs" firstAttribute="top" secondItem="zvH-Tq-llF" secondAttribute="topMargin" constant="-8" id="CmU-eK-3Ft"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="fvb-xB-IUs" secondAttribute="bottom" constant="-8" id="MqL-M5-dvT"/>
+                                        <constraint firstItem="fvb-xB-IUs" firstAttribute="top" secondItem="zvH-Tq-llF" secondAttribute="topMargin" constant="-20" id="CmU-eK-3Ft"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="fvb-xB-IUs" secondAttribute="bottom" constant="-16" id="MqL-M5-dvT"/>
                                         <constraint firstItem="fvb-xB-IUs" firstAttribute="leading" secondItem="zvH-Tq-llF" secondAttribute="leadingMargin" constant="1" id="SAG-M1-GDU"/>
                                         <constraint firstItem="fvb-xB-IUs" firstAttribute="centerY" secondItem="zvH-Tq-llF" secondAttribute="centerY" constant="5" id="T4d-i6-8Wg"/>
                                         <constraint firstItem="fvb-xB-IUs" firstAttribute="centerX" secondItem="zvH-Tq-llF" secondAttribute="centerX" id="fg0-Nx-k3G"/>
@@ -117,8 +133,53 @@
                                     <outlet property="cardView" destination="fvb-xB-IUs" id="397-mz-ymB"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellbutton" rowHeight="36" id="jqc-8r-7j0" customClass="CardCell" customModule="CardTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="233" width="375" height="36"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jqc-8r-7j0" id="Ta0-iG-mNv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZa-zC-fnV">
+                                            <rect key="frame" x="9" y="-12" width="357" height="56"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTv-YZ-ItF">
+                                                    <rect key="frame" x="14" y="13" width="335" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="VTv-YZ-ItF" firstAttribute="top" secondItem="FZa-zC-fnV" secondAttribute="top" constant="13" id="G6V-Km-Gyr"/>
+                                                <constraint firstItem="VTv-YZ-ItF" firstAttribute="leading" secondItem="FZa-zC-fnV" secondAttribute="leading" constant="14" id="UEZ-mE-KRa"/>
+                                                <constraint firstAttribute="bottom" secondItem="VTv-YZ-ItF" secondAttribute="bottom" constant="13" id="Z2b-E4-ub9"/>
+                                                <constraint firstAttribute="trailing" secondItem="VTv-YZ-ItF" secondAttribute="trailing" constant="8" id="sXc-Pd-tcH"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="FZa-zC-fnV" secondAttribute="bottom" constant="-16" id="DBn-1a-lo7"/>
+                                        <constraint firstItem="FZa-zC-fnV" firstAttribute="top" secondItem="Ta0-iG-mNv" secondAttribute="topMargin" constant="-20" id="IbL-p9-BUa"/>
+                                        <constraint firstItem="FZa-zC-fnV" firstAttribute="centerX" secondItem="Ta0-iG-mNv" secondAttribute="centerX" id="akn-OI-u2A"/>
+                                        <constraint firstItem="FZa-zC-fnV" firstAttribute="leading" secondItem="Ta0-iG-mNv" secondAttribute="leadingMargin" constant="1" id="hQy-iM-hfE"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="FZa-zC-fnV" secondAttribute="trailing" constant="1" id="jAX-TZ-1P5"/>
+                                        <constraint firstItem="FZa-zC-fnV" firstAttribute="centerY" secondItem="Ta0-iG-mNv" secondAttribute="centerY" constant="5" id="n9g-ra-Fvy"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="n9g-ra-Fvy"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="cardButton" destination="VTv-YZ-ItF" id="fSp-J5-bbB"/>
+                                    <outlet property="cardView" destination="FZa-zC-fnV" id="Cc3-30-8Fw"/>
+                                </connections>
+                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellfoot" rowHeight="105" id="JxL-1K-SLd" customClass="CardCell" customModule="CardTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="302" width="375" height="105"/>
+                                <rect key="frame" x="0.0" y="269" width="375" height="105"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JxL-1K-SLd" id="cuW-ff-jaM">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
@@ -180,7 +241,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="headercell" id="pWj-2t-hOq">
-                                <rect key="frame" x="0.0" y="407" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="374" width="375" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pWj-2t-hOq" id="IzP-ct-c0m">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
