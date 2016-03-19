@@ -21,7 +21,9 @@ class TableController: UITableViewController {
         
         self.tableView.separatorColor = UIColor.clearColor()
         
+        //set up a base height for the row
         self.tableView.estimatedRowHeight = 200
+        //have the row resize to fit the content
         self.tableView.rowHeight = UITableViewAutomaticDimension
 
         // Uncomment the following line to preserve selection between presentations
@@ -50,31 +52,57 @@ class TableController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return titles.count + 1
+        return titles.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        
-        if(indexPath.row != 0 ) {
+        // if it's the first row, use the header cell
+        if(indexPath.row == 0 ) {
+//            let cell = tableView.dequeueReusableCellWithIdentifier("headercell", forIndexPath: indexPath)
+//            return cell
+            
             // choose which prototype to use
             let cell = tableView.dequeueReusableCellWithIdentifier("cellblock", forIndexPath: indexPath)  as! CardCell
-            
             //make the labels say something
-            cell.titleLabel.text = titles[indexPath.row - 1]
-            cell.bodyLabel.text = bodies[indexPath.row - 1]
+            cell.titleLabel.text = titles[indexPath.row]
+            cell.bodyLabel.text = bodies[indexPath.row]
             cell.bodyLabel.sizeToFit()
             return cell
-        }else{
-            let cell = tableView.dequeueReusableCellWithIdentifier("headercell", forIndexPath: indexPath)
+            
+        
+        }else if(indexPath.row == titles.count - 1){
+            let cell = tableView.dequeueReusableCellWithIdentifier("cellfoot", forIndexPath: indexPath)  as! CardCell
+            //make the labels say something
+            cell.titleLabel.text = titles[indexPath.row]
+            cell.bodyLabel.text = bodies[indexPath.row ]
+            cell.bodyLabel.sizeToFit()
             return cell
-        }
+        // or else use the normal cell
+        }else{
+            
+            // choose which prototype to use
+            let cell = tableView.dequeueReusableCellWithIdentifier("cellhead", forIndexPath: indexPath)  as! CardCell
+            //make the labels say something
+            //cell.titleLabel.text = titles[indexPath.row]
+            cell.bodyLabel.text = bodies[indexPath.row ]
+            cell.bodyLabel.sizeToFit()
+            return cell
+        } //end if/else
+        
+//        // choose which prototype to use
+//        let cell = tableView.dequeueReusableCellWithIdentifier("cellblock", forIndexPath: indexPath)  as! CardCell
+//        //make the labels say something
+//        cell.titleLabel.text = titles[indexPath.row]
+//        cell.bodyLabel.text = bodies[indexPath.row]
+//        cell.bodyLabel.sizeToFit()
+//        return cell
         
         
 

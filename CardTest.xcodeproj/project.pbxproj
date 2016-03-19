@@ -492,6 +492,7 @@
 				D44613BE1C9C88AD0031F1A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D44613BF1C9C88AD0031F1A3 /* Build configuration list for PBXNativeTarget "CardTestTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +501,7 @@
 				D44613C11C9C88AD0031F1A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D44613C21C9C88AD0031F1A3 /* Build configuration list for PBXNativeTarget "CardTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +510,7 @@
 				D44613C41C9C88AD0031F1A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
