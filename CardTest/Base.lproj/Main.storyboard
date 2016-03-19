@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rV7-1R-t9p">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card Feed Controller-->
+        <scene sceneID="PdA-1w-Fy9">
+            <objects>
+                <tableViewController id="8VC-eu-CP3" userLabel="Card Feed Controller" customClass="TableController" customModule="CardTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="HAd-Iq-5XC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellblock" rowHeight="105" id="JxL-1K-SLd" customClass="CardCell" customModule="CardTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="105"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JxL-1K-SLd" id="cuW-ff-jaM">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lE-B1-NtT">
+                                            <rect key="frame" x="9" y="11" width="357" height="93"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVK-dY-EPK">
+                                                    <rect key="frame" x="15" y="17" width="326" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" red="0.3350595235824585" green="0.73485511541366577" blue="0.71193140745162964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RS-iH-Rry">
+                                                    <rect key="frame" x="15" y="45" width="326" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="3RS-iH-Rry" secondAttribute="trailing" constant="16" id="5rH-Ac-vn4"/>
+                                                <constraint firstAttribute="bottom" secondItem="3RS-iH-Rry" secondAttribute="bottom" constant="28" id="6Aq-gC-Vi0"/>
+                                                <constraint firstItem="lVK-dY-EPK" firstAttribute="top" secondItem="3lE-B1-NtT" secondAttribute="top" constant="17" id="6DX-Tl-GP1"/>
+                                                <constraint firstAttribute="trailing" secondItem="lVK-dY-EPK" secondAttribute="trailing" constant="16" id="8lX-oZ-mTE"/>
+                                                <constraint firstItem="lVK-dY-EPK" firstAttribute="leading" secondItem="3lE-B1-NtT" secondAttribute="leading" constant="15" id="Ix4-he-zvx"/>
+                                                <constraint firstItem="3RS-iH-Rry" firstAttribute="leading" secondItem="3lE-B1-NtT" secondAttribute="leading" constant="15" id="KQ2-fa-SfO"/>
+                                                <constraint firstItem="3RS-iH-Rry" firstAttribute="top" secondItem="lVK-dY-EPK" secondAttribute="bottom" constant="8" id="L5d-u6-xgd"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="3lE-B1-NtT" secondAttribute="trailing" constant="1" id="A6r-H6-C2s"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="3lE-B1-NtT" secondAttribute="bottom" constant="-7" id="Nhl-dD-dOQ"/>
+                                        <constraint firstItem="3lE-B1-NtT" firstAttribute="centerY" secondItem="cuW-ff-jaM" secondAttribute="centerY" constant="5" id="Ss0-jx-eDw"/>
+                                        <constraint firstItem="3lE-B1-NtT" firstAttribute="top" secondItem="cuW-ff-jaM" secondAttribute="topMargin" constant="3" id="Ykg-9h-e80"/>
+                                        <constraint firstItem="3lE-B1-NtT" firstAttribute="leading" secondItem="cuW-ff-jaM" secondAttribute="leadingMargin" constant="1" id="nzD-T8-uqu"/>
+                                        <constraint firstItem="3lE-B1-NtT" firstAttribute="centerX" secondItem="cuW-ff-jaM" secondAttribute="centerX" id="q67-Ss-PYS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="bodyLabel" destination="3RS-iH-Rry" id="Ymz-gi-95B"/>
+                                    <outlet property="cardView" destination="3lE-B1-NtT" id="v1U-FZ-cH9"/>
+                                    <outlet property="titleLabel" destination="lVK-dY-EPK" id="PH5-x7-G7S"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8VC-eu-CP3" id="LlL-Nb-liL"/>
+                            <outlet property="delegate" destination="8VC-eu-CP3" id="sbg-tj-DZz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Waldorf Worldwide" id="SR4-qA-haB"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UhR-Nw-8Br" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="927.5" y="74.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cfT-k5-DpF">
+            <objects>
+                <navigationController id="rV7-1R-t9p" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bAg-2S-tLJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.3350595235824585" green="0.73485511541366577" blue="0.71193140745162964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="0.0"/>
+                            <color key="textColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8VC-eu-CP3" kind="relationship" relationship="rootViewController" id="gNX-E9-uHL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zWX-0F-iAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="512"/>
+        </scene>
+    </scenes>
+</document>
