@@ -16,6 +16,8 @@
 		D44613B81C9C88AD0031F1A3 /* CardTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44613B71C9C88AD0031F1A3 /* CardTestUITests.swift */; };
 		D44613C61C9C8A700031F1A3 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44613C51C9C8A700031F1A3 /* CardCell.swift */; };
 		D44613C81C9C8CFB0031F1A3 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44613C71C9C8CFB0031F1A3 /* TableController.swift */; };
+		D46C062C1CA23D19008D43F4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C062B1CA23D19008D43F4 /* Card.swift */; };
+		D46C062F1CA23DD8008D43F4 /* CardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C062E1CA23DD8008D43F4 /* CardDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		D44613B91C9C88AD0031F1A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D44613C51C9C8A700031F1A3 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		D44613C71C9C8CFB0031F1A3 /* TableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
+		D46C062B1CA23D19008D43F4 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		D46C062E1CA23DD8008D43F4 /* CardDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				D44613A31C9C88AD0031F1A3 /* Info.plist */,
 				D44613C51C9C8A700031F1A3 /* CardCell.swift */,
 				D44613C71C9C8CFB0031F1A3 /* TableController.swift */,
+				D46C062B1CA23D19008D43F4 /* Card.swift */,
+				D46C062E1CA23DD8008D43F4 /* CardDataSource.swift */,
 			);
 			path = CardTest;
 			sourceTree = "<group>";
@@ -262,7 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46C062F1CA23DD8008D43F4 /* CardDataSource.swift in Sources */,
 				D446139A1C9C88AD0031F1A3 /* ViewController.swift in Sources */,
+				D46C062C1CA23D19008D43F4 /* Card.swift in Sources */,
 				D44613981C9C88AD0031F1A3 /* AppDelegate.swift in Sources */,
 				D44613C81C9C8CFB0031F1A3 /* TableController.swift in Sources */,
 				D44613C61C9C8A700031F1A3 /* CardCell.swift in Sources */,

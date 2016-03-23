@@ -15,6 +15,11 @@ let bodies = ["Vivamus in varius felis, eu consectetur mi. Sed elit ipsum, feugi
     "This one is useless. I just wanted to do something. The twilight zone is very cool though."]
 
 class TableController: UITableViewController {
+    
+    @IBOutlet weak var zaTableView: UITableView!
+    
+    let manager = CardDataSource()
+    var cards = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +36,10 @@ class TableController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+//        
+//        self.zaTableView.delegate = self
+//        self.zaTableView.dataSource = self
+        self.cards = manager.getCards()
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,31 +66,33 @@ class TableController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return titles.count
+//        return titles.count
+        return cards.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        // get the card data from the datasource thing
+        let card = self.cards[indexPath.row] as? Card
+        
         // if it's the first row, use the header cell
         if(indexPath.row == 0 ) {
-//            let cell = tableView.dequeueReusableCellWithIdentifier("headercell", forIndexPath: indexPath)
-//            return cell
             
             // choose which prototype to use
             let cell = tableView.dequeueReusableCellWithIdentifier("cellblock", forIndexPath: indexPath)  as! CardCell
             //make the labels say something
-            cell.titleLabel.text = titles[indexPath.row]
-            cell.bodyLabel.text = bodies[indexPath.row]
+            cell.titleLabel.text = card?.title
+            cell.bodyLabel.text = card?.content
             cell.bodyLabel.sizeToFit()
             return cell
             
         // if it's the last one, use the footer
-        }else if(indexPath.row == titles.count - 1){
+        }else if(indexPath.row == cards.count - 1){
             let cell = tableView.dequeueReusableCellWithIdentifier("cellfoot", forIndexPath: indexPath)  as! CardCell
             //make the labels say something
-            cell.titleLabel.text = titles[indexPath.row]
-            cell.bodyLabel.text = bodies[indexPath.row ]
+            cell.titleLabel.text = card?.title
+            cell.bodyLabel.text = card?.content
             cell.bodyLabel.sizeToFit()
             return cell
         // or else use the normal cell
@@ -91,20 +102,10 @@ class TableController: UITableViewController {
             let cell = tableView.dequeueReusableCellWithIdentifier("cellhead", forIndexPath: indexPath)  as! CardCell
             //make the labels say something
             //cell.titleLabel.text = titles[indexPath.row]
-            cell.bodyLabel.text = bodies[indexPath.row ]
+            cell.bodyLabel.text = card?.content
             cell.bodyLabel.sizeToFit()
             return cell
         } //end if/else
-        
-//        // choose which prototype to use
-//        let cell = tableView.dequeueReusableCellWithIdentifier("cellblock", forIndexPath: indexPath)  as! CardCell
-//        //make the labels say something
-//        cell.titleLabel.text = titles[indexPath.row]
-//        cell.bodyLabel.text = bodies[indexPath.row]
-//        cell.bodyLabel.sizeToFit()
-//        return cell
-        
-        
 
     }
     
