@@ -76,10 +76,18 @@ class TableController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         // get the card data from the datasource thing
-        let card = self.cards[indexPath.section][indexPath.row] as? Card
+        let card = (cards[indexPath.section] as? NSArray)![indexPath.row] as? Card
         
+        if(card?.style == "header") {
+            // choose which prototype to use
+            let cell = tableView.dequeueReusableCellWithIdentifier("headercell", forIndexPath: indexPath)
+            //make the labels say something
+            //cell.titleLabel.text = card?.title
+            //cell.bodyLabel.sizeToFit()
+            return cell
+            
         // if it's the first row, use the header cell
-        if(indexPath.row == 0 ) {
+        }else if(indexPath.row == 0 ) {
             
             // choose which prototype to use
             let cell = tableView.dequeueReusableCellWithIdentifier("cellblock", forIndexPath: indexPath)  as! CardCell
@@ -90,7 +98,7 @@ class TableController: UITableViewController {
             return cell
             
         // if it's the last one, use the footer
-        }else if(indexPath.row == cards.count - 1){
+        }else if(indexPath.row == cards[indexPath.section].count - 1){
             let cell = tableView.dequeueReusableCellWithIdentifier("cellfoot", forIndexPath: indexPath)  as! CardCell
             //make the labels say something
             cell.titleLabel.text = card?.title
