@@ -20,6 +20,7 @@ class TableController: UITableViewController {
     
     let manager = CardDataSource()
     var cards = []
+    var sections: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,8 @@ class TableController: UITableViewController {
 //        
 //        self.zaTableView.delegate = self
 //        self.zaTableView.dataSource = self
+        
+        //self.sections = manager.sections
         self.cards = manager.getCards()
     }
 
@@ -61,20 +64,19 @@ class TableController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return cards.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-//        return titles.count
-        return cards.count
+        return cards[section].count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         // get the card data from the datasource thing
-        let card = self.cards[indexPath.row] as? Card
+        let card = self.cards[indexPath.section][indexPath.row] as? Card
         
         // if it's the first row, use the header cell
         if(indexPath.row == 0 ) {

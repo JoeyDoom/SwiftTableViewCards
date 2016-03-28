@@ -8,10 +8,20 @@
 
 import Foundation
 
+//class Section {
+//    
+//    var cards: [Card]
+//    
+//    init(cards: [Card]) {
+//        self.cards = cards
+//    }
+//    
+//}
+
 class Card {
     
     // set up the variables
-    var title: String
+    var title: String!
     var content: String
     
     

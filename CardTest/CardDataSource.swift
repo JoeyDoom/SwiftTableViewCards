@@ -10,6 +10,7 @@ import Foundation
 
 class CardDataSource {
     var cards:[Card]
+    var cards2:[Card]
     
     init() {
         cards = []
@@ -18,10 +19,14 @@ class CardDataSource {
         
         let card2 = Card(title: "Worldwide What", content: "It was bus #55")
         cards.append(card2)
+        
+        cards2 = []
+        let card3 = Card(title: "Chad Sexton", content: "Has Very Cool Drums")
+        cards2.append(card3)
     }
     
-    func getCards() -> [Card] {
-        return cards
+    func getCards() -> [[Card]] {
+        return [cards, cards2]
     }
     
 }
