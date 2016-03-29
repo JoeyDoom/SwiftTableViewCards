@@ -1,29 +1,22 @@
-# README #
+# Swift 2 Card Style Table View #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This is the basic skeleton to create a dynamic card-styled layout in iOS. Still semi-rough, but covers all of the complicated parts (none of this is really too complicated though). 
 
-### What is this repository for? ###
+I'll write better instructions for this as I improve things, but this is the basic stuff"
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+### What does this do? ###
 
-### How do I get set up? ###
+* Dynamically creates "cards" (UITableView sections) with "tables"(UITableViewCells) inside of each card
+* Support for large header section outside of the basic card layout
+* Says a lot of stuff about Good Charlotte and 311
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+### How do I use it? ###
 
-### Contribution guidelines ###
+* Set up your card data in the `CardDataSource.swift` file
+* The cards should magically work
 
-* Writing tests
-* Code review
-* Other guidelines
+### What's left here? ###
 
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* Better instructions on how to format the cards and set up header areas
+* Instructions on how to use this in a real project
+* Fix some ugly formatting just because.
