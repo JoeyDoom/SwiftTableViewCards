@@ -8,12 +8,6 @@
 
 import UIKit
 
-let titles = ["Important Stuff", "Joey is the best", "Third One", "Booger Farm"]
-let bodies = ["Vivamus in varius felis, eu consectetur mi. Sed elit ipsum, feugiat et lacinia sit amet, vehicula vitae mi. Morbi sit amet tellus luctus, blandit lacus quis, tincidunt justo. Quisque odio dolor, condimentum sit amet suscipit nec, rhoncus sed est. Morbi vel sapien vitae ex egestas pretium et id tellus. Sed viverra leo ut justo bibendum ultricies. Nulla ultricies porttitor est, nec fermentum orci consectetur et. Sed ac turpis at lacus aliquet congue. Nulla quis venenatis ante.",
-    "butt dong",
-    "I wanna know what love is. I want you to show me.",
-    "This one is useless. I just wanted to do something. The twilight zone is very cool though."]
-
 class TableController: UITableViewController {
     
     @IBOutlet weak var zaTableView: UITableView!
@@ -37,9 +31,6 @@ class TableController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-//        
-//        self.zaTableView.delegate = self
-//        self.zaTableView.dataSource = self
         
         //self.sections = manager.sections
         self.cards = manager.getCards()
@@ -78,12 +69,10 @@ class TableController: UITableViewController {
         // get the card data from the datasource thing
         let card = (cards[indexPath.section] as? NSArray)![indexPath.row] as? Card
         
+        // if it's the big header style cell, use that...duh
         if(card?.style == "header") {
             // choose which prototype to use
             let cell = tableView.dequeueReusableCellWithIdentifier("headercell", forIndexPath: indexPath)
-            //make the labels say something
-            //cell.titleLabel.text = card?.title
-            //cell.bodyLabel.sizeToFit()
             return cell
             
         // if it's the first row, use the header cell

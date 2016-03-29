@@ -41,7 +41,7 @@ class CardDataSource {
         let card4 = Card(title: "Leopard Spots", content: "Make for a very comfortable chair")
         cards3.append(card4)
         
-        let card5 = Card(title: "Alice Copper", content: "Also has a sword")
+        let card5 = Card(title: "Alice Copper", content: "Alice Cooper has a sword")
         cards3.append(card5)
         
         let card7 = Card(title: "Wiggles", content: "Who Cares")
