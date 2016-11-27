@@ -2,7 +2,7 @@
 
 This is the basic skeleton to create a dynamic card-styled layout in iOS. Still semi-rough, but covers all of the complicated parts (none of this is really too complicated though). 
 
-I'll write better instructions for this as I improve things, but this is the basic stuff"
+I'll write better instructions for this as I improve things, but this is the basic stuff
 
 ### What does this do? ###
 
@@ -20,8 +20,5 @@ I'll write better instructions for this as I improve things, but this is the bas
 * Better instructions on how to format the cards and set up header areas
 * Instructions on how to use this in a real project
 * Fix some ugly formatting just because.
-
-### Credits ###
-I pieced this together from a bunch of different sources. I suppose that I'll get them together here if we ever decide to make this a real thing.
 
 `¯\_(ツ)_/¯`
